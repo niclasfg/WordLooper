@@ -1,0 +1,32 @@
+
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
+    background-image: url("Images/bamboo.png");
+    background-color: #fffff7;
+    text-size-adjust: 300%;
+   }
+
+.wordBox {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    font-size: xxx-large;
+}
+
+.word {
+    font-size: 300%;  
+    margin-top: 15%;  
+}
+
+.pronounciation {
+    font-size: 100%;    
+}
+
+.definition {
+    font-size: 100%;    
+}
+
+.sentence {
+    
+}
