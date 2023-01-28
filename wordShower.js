@@ -12,8 +12,9 @@ function getSentence(word){
 
 function getHSKLevel(word){
     if (word in hskLevels) {
-        console.log(hskLevels[word])
+        return hskLevels[word]["HSKLevel"]
     }
+    return ""
 }
 
 function checkHeisig(word){
@@ -37,7 +38,7 @@ function randomWord() {
         isWordInHeisig = checkHeisig(word);
     }
     console.log("Loaded word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
-    console.log(getHSKLevel(word));
+    //console.log(getHSKLevel(word));
     return word
 }
 
@@ -45,11 +46,13 @@ function displayWord(newWord){
     let wordText = document.querySelector(".word");
     let pronounciationText = document.querySelector(".pronounciation");
     let definitionText = document.querySelector(".definition");
+    let hskLevelText = document.querySelector(".hskLevel");
     // let sentanceText = document.querySelector(".sentence");
 
     wordText.innerHTML = newWord;
     pronounciationText.innerHTML = getPinyin(newWord);
     definitionText.innerHTML = getDefinition(newWord);
+    hskLevelText.innerHTML = getHSKLevel(newWord)
     // sentanceText.innerHTML = getSentence(newWord);
 }
 
@@ -59,7 +62,7 @@ function newWord(){
 
 function loopWords() {
     setInterval(function(){
-        newWord()}, 10000)
+        newWord()}, 5000)
 }
 
 newWord()
