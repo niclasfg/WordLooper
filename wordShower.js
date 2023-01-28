@@ -1,5 +1,5 @@
 function getPinyin(word){
-    return pinyinify(cedict[word]["pinyin"][0]).replace(/\s/g, "")
+    return pinyinify(cedict[word]["pinyin"][0]).replaceAll("r5", "r").replace(/\s/g, "")
 }
 
 function getDefinition(word){
@@ -51,19 +51,15 @@ function displayWord(newWord){
 
     wordText.innerHTML = newWord;
     pronounciationText.innerHTML = getPinyin(newWord);
-    definitionText.innerHTML = getDefinition(newWord);
+    definitionText.innerHTML = getDefinition(newWord).replaceAll(";", "<br>");
     hskLevelText.innerHTML = getHSKLevel(newWord)
     // sentanceText.innerHTML = getSentence(newWord);
 }
 
-function newWord(){
-    displayWord(randomWord())
-}
-
 function loopWords() {
     setInterval(function(){
-        newWord()}, 5000)
+        displayWord(randomWord())}, 5000)
 }
 
-newWord()
+displayWord(randomWord())
 loopWords()

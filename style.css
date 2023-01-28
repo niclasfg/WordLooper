@@ -1,10 +1,36 @@
 
 body {
-    font-family: 'Hiragino Kaku Gothic Pro', 'WenQuanYi Zen Hei', '微軟正黑體', '蘋果儷中黑', Helvetica, Arial, sans-serif;
-    background-image: url("Images/bamboo.png");
+    font-family: 'Arimo', 'Noto Serif', Helvetica, Arial, sans-serif;
+    background-image: url("Images/6.jpg");
+    background-size: cover;
     background-color: #fffff7;
     text-size-adjust: 300%;
-   }
+    height: 100%; 
+    overflow: hidden
+}
+
+.random-bg {
+
+}
+
+.chinese {
+    font-family: "KaiTi";
+    color: white;
+    text-shadow:
+        0.03em 0 5px black,
+        0 0.03em 5px black,
+        -0.03em 0 5px black,
+        0 -0.03em 5px black;
+  }
+
+.shadow {
+    color: white;
+    text-shadow:
+        0.07em 0 5px black,
+        0 0.07em 5px black,
+        -0.07em 0 5px black,
+        0 -0.07em 5px black;
+}
 
 .wordBox {
     display: flex;
@@ -12,25 +38,48 @@ body {
     justify-items: center;
     align-items: center;
     font-size: xxx-large;
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
 
 .word {
-    font-size: 300%;  
-    margin-top: 15%;  
+    flex-grow: 4;
+    font-size: 15vmin;   
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
 
 .pronounciation {
-    font-size: 100%;    
+    flex-grow: 1;
+    font-size: 4vmin;  
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
 
 .definition {
-    font-size: 100%;    
+    flex-grow: 1;
+    font-size: 6vmin;   
+    text-align: center;
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
 
 .hskLevel{
-    font-size: 80%;    
+    flex-grow: 1;
+    font-size: 4vmin;    
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
 
 .sentence {
-    font-size: 100%;    
+    flex-grow: 1;
+    font-size: 4vmin;    
+    /* border-width: 5px;
+    border-style:solid;
+    border-color: red; */
 }
