@@ -10,9 +10,34 @@ function getSentence(word){
     return "No sentence mining yet... (Sorry)"
 }
 
+function getHSKLevel(word){
+    if (word in hskLevels) {
+        console.log(hskLevels[word])
+    }
+}
+
+function checkHeisig(word){
+    let chars = Array.from(word); 
+    //console.log(chars);
+    for (let c in chars) {
+        //console.log(chars[c]);
+        if (!heisigHanzi.includes(chars[c])) {
+            return false
+        }
+      }
+    return true
+}
+
 function randomWord() {
-    let word = words[dictLen * Math.random() << 0];
-    console.log("Loading word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+    let word = words[dictLen * Math.random() << 0];   //Get a random word from cedict
+    let isWordInHeisig = checkHeisig(word);   //set bool to false if any character in word is not in heisig, else true.
+    while (!isWordInHeisig) {                 // redo if not a heisig word.
+        console.log("Skipped word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+        word = words[dictLen * Math.random() << 0];
+        isWordInHeisig = checkHeisig(word);
+    }
+    console.log("Loaded word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+    console.log(getHSKLevel(word));
     return word
 }
 
@@ -34,7 +59,7 @@ function newWord(){
 
 function loopWords() {
     setInterval(function(){
-        newWord()}, 60000)
+        newWord()}, 10000)
 }
 
 newWord()
