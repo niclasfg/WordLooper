@@ -57,8 +57,9 @@ function displayWord(newWord){
 }
 
 function loopWords() {
+    let reloadTime = 60; // Seconds before nex word.
     setInterval(function(){
-        displayWord(randomWord())}, 5000)
+        displayWord(randomWord())}, reloadTime* 1000)
 }
 
 displayWord(randomWord())
