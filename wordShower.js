@@ -10,7 +10,7 @@ function getSentence(word){
     return "No sentence mining yet... (Sorry)"
 }
 
-function getHSKLevel(word){
+function getHSKLevel(word){ 
     if (word in hskLevels) {
         return hskLevels[word]["HSKLevel"]
     }
@@ -29,25 +29,45 @@ function checkHeisig(word){
     return true
 }
 
+
 function randomWord() {
     let word = words[dictLen * Math.random() << 0];   //Get a random word from cedict
-    let isWordInHeisig = checkHeisig(word);   //set bool to false if any character in word is not in heisig, else true.
-    while (!isWordInHeisig) {                 // redo if not a heisig word.
-        console.log("Skipped word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
-        word = words[dictLen * Math.random() << 0];
-        isWordInHeisig = checkHeisig(word);
+
+
+    
+    if (heisigFilterBox.checked) {
+        let isWordInHeisig = checkHeisig(word);   //set bool to false if any character in word is not in heisig, else true.
+        while (!isWordInHeisig) {                 // redo if not a heisig word.
+            console.log("Skipped word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+            word = words[dictLen * Math.random() << 0];
+            isWordInHeisig = checkHeisig(word);
+        }
     }
+    if (hskFilterBox.checked) {
+        let isWordInHSK = getHSKLevel(word) != ""; 
+        while (!isWordInHSK) {
+            console.log("Skipped word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+            word = words[dictLen * Math.random() << 0];
+            isWordInHSK = getHSKLevel(word) != ""; 
+        }
+    }
+
+    if (longWordsFilterBox.checked) {
+        let isWordShort = word.length < 4;
+        while (!isWordShort) {
+            console.log("Skipped word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
+            word = words[dictLen * Math.random() << 0];
+            isWordShort = word.length < 4;
+        }
+    }
+
     console.log("Loaded word: " + word + " " + getPinyin(word) + " " + getDefinition(word));
     //console.log(getHSKLevel(word));
     return word
 }
 
 function displayWord(newWord){
-    let wordText = document.querySelector(".word");
-    let pronounciationText = document.querySelector(".pronounciation");
-    let definitionText = document.querySelector(".definition");
-    let hskLevelText = document.querySelector(".hskLevel");
-    // let sentanceText = document.querySelector(".sentence");
+    
 
     wordText.innerHTML = newWord;
     pronounciationText.innerHTML = getPinyin(newWord);
@@ -57,10 +77,21 @@ function displayWord(newWord){
 }
 
 function loopWords() {
-    let reloadTime = 60; // Seconds before nex word.
     setInterval(function(){
         displayWord(randomWord())}, reloadTime* 1000)
 }
+
+const  wordText = document.querySelector(".word");
+const  pronounciationText = document.querySelector(".pronounciation");
+const definitionText = document.querySelector(".definition");
+const hskLevelText = document.querySelector(".hskLevel");
+// let sentanceText = document.querySelector(".sentence");
+
+const hskFilterBox = document.querySelector("#hskbox");
+const heisigFilterBox = document.querySelector("#heisigbox");
+const longWordsFilterBox = document.querySelector("#longWordsbox");
+
+const reloadTime = 60; // Seconds before nex word.
 
 displayWord(randomWord())
 loopWords()
