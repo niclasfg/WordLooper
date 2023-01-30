@@ -6,10 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="menu.css" type="text/css">
 
     <title>WordPage</title>
 </head>
-<body class="random_bg">
+<body>
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+            <!-- <ul>
+                <li><input type="checkbox" class="setting">Only words in HSK</li>
+                <li><input type="checkbox" class="setting">Only words using Heisig Character</li>
+                <li><input type="checkbox" class="setting">Only short words</li>
+                <li><input type="checkbox" class="setting">Only single characters</li>
+            </ul> -->
+            
+
+        <div class="boxes">
+            <input type="checkbox" id="hsk-box" class="setting">
+            <label for="hsk-box">Only words in HSK</label>
+        
+            <input type="checkbox" id="heisig-box" class="setting">
+            <label for="heisig-box">Only words using Heisig Character</label>
+        
+            <input type="checkbox" id="longWords-box" class="setting">
+            <label for="longWords-box">Only words with less then 4 characters</label>
+        </div>
+  
+  
+        </div>
+    </div>
+
     <div class="wordBox">
         <p class="word chinese">Word</p>
         <p class="pronounciation shadow">Pronounciation</p>
