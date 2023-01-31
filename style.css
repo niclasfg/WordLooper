@@ -59,15 +59,15 @@ body {
 }
 
 .definition {
-    flex: 1 5 10%;
-    font-size: 6vmin;   
+    flex: 1 25 10%;
+    font-size: 4vmin;   
     text-align: center;
     /* border: solid red; */
 }
 
 .hskLevel{
     flex: 1 1 10%;
-    font-size: 4vmin;    
+    font-size: 3vmin;    
     /* border: solid red; */
 }
 
