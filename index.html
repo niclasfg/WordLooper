@@ -17,7 +17,9 @@
         <div> 
             <!-- Why does the menu disappear if i delete this div?!? -->
         <div class="boxes">
-            <p><b>WordLooper, by Niclas Geuken (niclas.fg@gmail.com)</b></p>
+            <p><b>WordLooper, by Niclas Geuken (niclas.fg@gmail.com) <br> 
+                Definitions and pinyin is from <a style="color:white" href="https://www.mdbg.net/chinese/dictionary?page=cedict">CEDICT</a></b>
+            </p>
             <p><u>Settings:</u></p>
             <input type="checkbox" id="hskbox" class="setting">
             <label for="hskbox">Only words in HSK</label>
@@ -40,9 +42,18 @@
     </div>
 
     <div class="wordBox">
-        <p class="word chinese">单词循环</p>
-        <p class="pronounciation shadow">Dāncí xúnhuán</p>
-        <p><div class="definition shadow">Wordloop</div><br><div class="hskLevel shadow"></div></p>
+        <div class="hanziBox">
+            <p class="word chinese">单词循环</p>
+        </div>
+        <div class="pronounciationBox">
+            <p class="pronounciation shadow">Dāncí xúnhuán</p>
+        </div>
+        <div class="definitionBox">
+            <p class="definition shadow">Wordloop</p>
+        </div>
+        <div class="hskBox">
+            <p class="hskLevel shadow"></p>
+        </div>
         <!-- <p class="sentence">This is an example sentance using the word.</p> -->
     </div>
 
