@@ -43,36 +43,36 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-size: xxx-large;
-    border: solid red;
+    /* border: solid red; */
 }
 
 .word {
     flex: 4 1 30%;
     font-size: 15vmin;   
-    border: solid red;
+    /* border: solid red; */
 }
 
 .pronounciation {
     flex: 1 1 10%;
     font-size: 4vmin;  
-    border: solid red;
+    /* border: solid red; */
 }
 
 .definition {
     flex: 1 5 10%;
     font-size: 6vmin;   
     text-align: center;
-    border: solid red;
+    /* border: solid red; */
 }
 
 .hskLevel{
     flex: 1 1 10%;
     font-size: 4vmin;    
-    border: solid red;
+    /* border: solid red; */
 }
 
 .sentence {
     flex: 1 1 10%;
     font-size: 4vmin;    
-    border: solid red;
+    /* border: solid red; */
 }
