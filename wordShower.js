@@ -67,8 +67,6 @@ function randomWord() {
 }
 
 function displayWord(newWord){
-    
-
     wordText.innerHTML = newWord;
     pronounciationText.innerHTML = getPinyin(newWord);
     definitionText.innerHTML = getDefinition(newWord).replaceAll(";", "<br>");
@@ -77,8 +75,17 @@ function displayWord(newWord){
 }
 
 function loopWords() {
-    setInterval(function(){
+    console.log("Starting a loop with interval " + reloadTime + "s.")
+    loop = setInterval(function(){
         displayWord(randomWord())}, reloadTime* 1000)
+}
+
+// Is called when the slider is changed, it cancels the old interval and starts a new one with the new interval.
+function setReloadTime(t) {
+    reloadTime = t;
+    timeSlider.innerHTML = t;
+    clearInterval(loop);
+    loopWords() 
 }
 
 const  wordText = document.querySelector(".word");
@@ -91,7 +98,10 @@ const hskFilterBox = document.querySelector("#hskbox");
 const heisigFilterBox = document.querySelector("#heisigbox");
 const longWordsFilterBox = document.querySelector("#longWordsbox");
 
-const reloadTime = 60; // Seconds before nex word.
+const timeSlider = document.querySelector("#reloadTimeSliderValue");
+
+reloadTime = 60; // Seconds before next word.
+timeSlider.innerHTML = reloadTime;
 
 displayWord(randomWord())
 loopWords()

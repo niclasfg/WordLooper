@@ -1,14 +1,20 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
 
 body {
-    /* display: flex;
-    flex-direction: row; */
+    display: flex;
+    justify-content: center;
     font-family: 'Arimo', 'Noto Serif', Helvetica, Arial, sans-serif;
-    background-image: url("Images/14.jpg");
+    background-image: url("Images/10.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-color: #fffff7;
+    background-color: white;
     text-size-adjust: 300%;
-    height: 100%; 
-    overflow: hidden
+    overflow: hidden;
+    height: 90%;
 }
 
 
@@ -34,51 +40,39 @@ body {
 .wordBox {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: space-evenly;
     align-items: center;
     font-size: xxx-large;
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }
 
 .word {
-    flex-grow: 4;
+    flex: 4 1 30%;
     font-size: 15vmin;   
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }
 
 .pronounciation {
-    flex-grow: 1;
+    flex: 1 1 10%;
     font-size: 4vmin;  
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }
 
 .definition {
-    flex-grow: 1;
+    flex: 1 5 10%;
     font-size: 6vmin;   
     text-align: center;
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }
 
 .hskLevel{
-    flex-grow: 1;
+    flex: 1 1 10%;
     font-size: 4vmin;    
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }
 
 .sentence {
-    flex-grow: 1;
+    flex: 1 1 10%;
     font-size: 4vmin;    
-    /* border-width: 5px;
-    border-style:solid;
-    border-color: red; */
+    border: solid red;
 }

@@ -81,8 +81,9 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 .menu{
     background: rgba(80, 80, 80, 0.5);
     width: 0%;
-    height: 50vh;
+    height: auto;
     position: absolute;
+    left: 0.5vw;
     border-radius: 15px;
   
   /* APPLYING TRANSITION TO THE MENU :  */
@@ -93,7 +94,7 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
 /* IF THE TOGGLER IS CHECKED, THEN INCREASE THE WIDTH OF THE MENU TO 30% , CREATING A SMOOTH EFFECT :  */
 
 .toggler:checked ~ .menu{
-    width:20%;
+    width:auto;
 }
 
 
@@ -160,6 +161,12 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   visibility: hidden;
 }
 
+.boxes > p {
+    padding-left: 0px;
+    font: 20px;
+    color: white;
+}
+
 /*Checkboxes styles*/
 .boxes > input[type="checkbox"] { display: none; }
 
@@ -197,3 +204,36 @@ TOP AT -10PX ABOVE THE MIDDLE ONE AND BOTTOM ONE IS 10PX BELOW THE MIDDLE: */
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+
+
+.TimeSlider {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 15px 40px #7E6D5766;
+    color: white;
+    }
+    .TimeSlider p {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    }
+    .TimeSlider input[type="range"] {
+    width: 120px;
+    height: 2px;
+    background: black;
+    border: none;
+    outline: none;
+    }
+    .TimeSlider input[type="range"]::-webkit-slider-thumb {
+    width: 30px;
+    height:30px;
+    background: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+    .TimeSlider input[type="range"]::-webkit-slider-thumb:hover {
+    background: black;
+    }

@@ -24,6 +24,8 @@
             
 
         <div class="boxes">
+            <p><b>WordLooper, by Niclas Geuken (niclas.fg@gmail.com)</b></p>
+            <p><u>Settings:</u></p>
             <input type="checkbox" id="hskbox" class="setting">
             <label for="hskbox">Only words in HSK</label>
         
@@ -32,6 +34,12 @@
         
             <input type="checkbox" id="longWordsbox" class="setting">
             <label for="longWordsbox">Only words with less then 4 characters</label>
+
+            <div class="TimeSlider">
+                <p id="reloadTimeSliderValue">60</p>
+                <input type="range" min="10" max="240" oninput="setReloadTime(this.value)">
+                <p>Reload time</p>
+            </div>
         </div>
   
   
