@@ -4,6 +4,7 @@ This page picks a random word from a list (or database) and shows it, along with
 ## TODO:
 - [x] Fix style so it looks good on mobile.
 - [ ] Add checkboxes for every HSK level.
+- [ ] Add heisig keyword over character and setting to toggle it.
 - [x] Add setting for the reload time.
 - [ ] Add button to load a new word manually.
 - [ ] Randomise the background when the page is loaded.
