@@ -3,6 +3,7 @@ This page picks a random word from a list (or database) and shows it, along with
 
 ## TODO:
 - [x] Fix style so it looks good on mobile.
+- [ ] save
 - [ ] Add checkboxes for every HSK level.
 - [ ] Add heisig keyword over character and setting to toggle it.
 - [x] Add setting for the reload time.
