@@ -9,4 +9,5 @@ This page picks a random word from a list (or database) and shows it, along with
 - [ ] Add button to load a new word manually.
 - [ ] Randomise the background when the page is loaded.
 - [ ] Find and display an example sentence when the word is loaded.
+- [ ] Add aility to hide field until clicked on
 - [ ] Make a loop for another language. 
